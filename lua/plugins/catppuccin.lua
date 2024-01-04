@@ -35,7 +35,9 @@ return {
           operators = {},
         },
         color_overrides = {},
-        custom_highlights = {},
+        custom_highlights = {
+          NotifyBackground = { bg = "#000000" },
+        },
         integrations = {
           cmp = true,
           gitsigns = true,
@@ -51,7 +53,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }
