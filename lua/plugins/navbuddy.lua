@@ -15,13 +15,36 @@ return {
       window = {
         border = "double",
       },
-      mappings = {
-        ["k"] = actions.next_sibling,
-        ["i"] = actions.previous_sibling,
-        ["j"] = actions.parent,
-        ["l"] = actions.children,
-      },
       lsp = { auto_attach = true },
+      mappings = {
+        ["<esc>"] = actions.close(), -- Close and cursor to original location
+        ["q"] = actions.close(),
+
+        ["j"] = actions.next_sibling(), -- down
+        ["k"] = actions.previous_sibling(), -- up
+
+        ["h"] = actions.parent(), -- Move to left panel
+        ["l"] = actions.children(), -- Move to right panel
+        ["0"] = actions.root(), -- Move to first panel
+        ["r"] = actions.rename(), -- Rename currently focused symbol
+
+        ["d"] = actions.delete(), -- Delete scope
+
+        ["f"] = actions.fold_create(), -- Create fold of current scope
+        ["F"] = actions.fold_delete(),
+        ["<enter>"] = actions.select(), -- Goto selected symbol
+        ["t"] = actions.telescope({ -- Fuzzy finder at current level.
+          layout_config = { -- All options that can be
+            height = 0.60, -- passed to telescope.nvim's
+            width = 0.60, -- default can be passed here.
+            prompt_position = "top",
+            preview_width = 0.50,
+          },
+          layout_strategy = "horizontal",
+        }),
+
+        ["g?"] = actions.help(), -- Open mappings help window
+      },
     })
   end,
 }
