@@ -18,3 +18,4 @@ vim.keymap.set(
   end,
   { noremap = true, silent = true, desc = "Copy file path relative to root" } -- options
 )
+vim.keymap.set("n", "<leader>gb", ":ToggleBlame window<CR>", { noremap = true, silent = true })
