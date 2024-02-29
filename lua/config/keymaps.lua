@@ -19,3 +19,9 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Copy file path relative to root" } -- options
 )
 vim.keymap.set("n", "<leader>gb", ":ToggleBlame window<CR>", { noremap = true, silent = true })
+vim.keymap.set(
+  "n",
+  "<leader>sx",
+  require("telescope.builtin").resume,
+  { noremap = true, silent = true, desc = "Resume last telescope session" }
+)
