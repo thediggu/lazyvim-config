@@ -25,3 +25,33 @@ vim.keymap.set(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Resume last telescope session" }
 )
+vim.keymap.set(
+  "n",
+  "<leader>fhh",
+  ":Telescope file_history history<CR>",
+  { noremap = true, silent = true, desc = "View the file's history" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>fhl",
+  ":Telescope file_history log<CR>",
+  { noremap = true, silent = true, desc = "View the file's history incrementally" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>fhb",
+  ":Telescope file_history backup<CR>",
+  { noremap = true, silent = true, desc = "Backup file (possibly with tag)" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>fhf",
+  ":Telescope file_history files<CR>",
+  { noremap = true, silent = true, desc = "View every file in the repo" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>fhq",
+  ":Telescope file_history query<CR>",
+  { noremap = true, silent = true, desc = "Query the repo" }
+)
