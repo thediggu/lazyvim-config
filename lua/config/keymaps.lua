@@ -55,3 +55,33 @@ vim.keymap.set(
   ":Telescope file_history query<CR>",
   { noremap = true, silent = true, desc = "Query the repo" }
 )
+vim.keymap.set(
+  "n",
+  "<leader>gad",
+  ":AdvancedGitSearch diff_commit_file<CR>",
+  { noremap = true, silent = true, desc = "View file git history" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>gaD",
+  ":AdvancedGitSearch diff_commit_line<CR>",
+  { noremap = true, silent = true, desc = "View line git history" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>gal",
+  ":AdvancedGitSearch search_log_content<CR>",
+  { noremap = true, silent = true, desc = "Search git log" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>gaL",
+  ":AdvancedGitSearch search_log_content_file<CR>",
+  { noremap = true, silent = true, desc = "Search git file log" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>gab",
+  ":AdvancedGitSearch diff_branch_file<CR>",
+  { noremap = true, silent = true, desc = "Diff file with branch" }
+)
